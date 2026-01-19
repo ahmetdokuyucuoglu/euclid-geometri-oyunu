@@ -1,0 +1,38 @@
+---
+layout: default
+title: Level 19
+cat: level
+lang: en
+number: 19
+
+---
+<p id="goal"><b>Goal:</b>  Construct two new circles of radius AB where each pair of the three circles is tangent. One of the two circles must also touch point B. 
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+Go to <a href="/Level20/">Level 20</a>.
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level19.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+checkobject("target1");
+checkobject("target2a");
+checkobject("target2b");
+
+LevelCompleted(drawn("target1")&&(drawn("target2a")||drawn("target2b")),4);
+
+}
+</script>
